@@ -1,0 +1,8 @@
+keypairs
+bot_keypair
+ErEBS6qJqRBmF8Brot77LyrGnGJgRijX1LudBjwN6EAs.json
+venv
+__pycache__
+*.pyc
+.git
+.env

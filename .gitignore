@@ -1,0 +1,7 @@
+keypairs/*
+bot_keypair/*
+venv
+__pycache__
+*.pyc
+.git
+.env

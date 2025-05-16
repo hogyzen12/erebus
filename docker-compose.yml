@@ -1,0 +1,23 @@
+services:
+  erebus-bot:
+    image: erebus-bot
+    env_file:
+      - .env
+    build:
+      context: .
+      args:
+        - SOLANA_RPC_URL=${SOLANA_RPC_URL:-https://api.mainnet-beta.solana.com}
+    volumes:
+      - erebus-keypairs:/app/keypairs
+      - erebus-bot-keypair:/app/bot_keypair
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+volumes:
+  erebus-keypairs:
+    external: true
+  erebus-bot-keypair:
+    external: true
